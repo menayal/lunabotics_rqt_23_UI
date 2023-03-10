@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>521</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="labelForSomeData">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>30</y>
+     <width>270</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label for some data:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inputFeedDataLabel">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>30</y>
+     <width>191</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>feedDatahere</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelForSomeData_2">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>120</y>
+     <width>270</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Label for some data:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inputFeedDataLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>120</y>
+     <width>191</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>feedDatahere</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
