@@ -1,0 +1,295 @@
+{
+  "keys": {},
+  "groups": {
+    "pluginmanager": {
+      "keys": {
+        "running-plugins": {
+          "type": "repr",
+          "repr": "{u'lunabotics_rqt_23_UI/My Plugin': [2, 1], u'rqt_rviz/RViz': [1]}"
+        }
+      },
+      "groups": {
+        "plugin__rqt_rviz__RViz__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "True"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'rvizConfigWithCamera.rviz[*] - RViz'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "rviz_config_file": {
+                  "type": "repr",
+                  "repr": "u'/home/nayal/catkin_ws/src/lunabotics_rqt_23_UI/rviz/rvizConfigWithCamera.rviz'"
+                },
+                "hide_menu": {
+                  "type": "repr",
+                  "repr": "False"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_image_view__ImageView__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__ImageViewWidget": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Image View'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "max_range": {
+                  "type": "repr",
+                  "repr": "10.0"
+                },
+                "rotate": {
+                  "type": "repr",
+                  "repr": "0"
+                },
+                "smooth_image": {
+                  "type": "repr",
+                  "repr": "False"
+                },
+                "mouse_pub_topic": {
+                  "type": "repr",
+                  "repr": "u'mouse_left'"
+                },
+                "num_gridlines": {
+                  "type": "repr",
+                  "repr": "0"
+                },
+                "toolbar_hidden": {
+                  "type": "repr",
+                  "repr": "False"
+                },
+                "zoom1": {
+                  "type": "repr",
+                  "repr": "False"
+                },
+                "dynamic_range": {
+                  "type": "repr",
+                  "repr": "False"
+                },
+                "topic": {
+                  "type": "repr",
+                  "repr": "u''"
+                },
+                "publish_click_location": {
+                  "type": "repr",
+                  "repr": "False"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__lunabotics_rqt_23_UI__My Plugin__2": {
+          "keys": {},
+          "groups": {
+            "dock_widget__MyPluginUi": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "True"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Form (2)'"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__lunabotics_rqt_23_UI__My Plugin__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__MyPluginUi": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "True"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Form'"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_graph__RosGraph__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__RosGraphUi": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Node Graph'"
+                }
+              },
+              "groups": {}
+            },
+            "plugin": {
+              "keys": {
+                "graph_type_combo_box_index": {
+                  "type": "repr",
+                  "repr": "u'0'"
+                },
+                "hide_tf_nodes_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'false'"
+                },
+                "filter_line_edit_text": {
+                  "type": "repr",
+                  "repr": "u'/'"
+                },
+                "highlight_connections_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "group_image_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "unreachable_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "actionlib_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "topic_filter_line_edit_text": {
+                  "type": "repr",
+                  "repr": "u'/'"
+                },
+                "group_tf_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "quiet_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "dead_sinks_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "leaf_topics_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "namespace_cluster_spin_box_value": {
+                  "type": "repr",
+                  "repr": "u'2'"
+                },
+                "hide_dynamic_reconfigure_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "auto_fit_graph_check_box_state": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                }
+              },
+              "groups": {}
+            }
+          }
+        },
+        "plugin__rqt_mypkg__My Plugin__1": {
+          "keys": {},
+          "groups": {
+            "dock_widget__MyPluginUi": {
+              "keys": {
+                "dockable": {
+                  "type": "repr",
+                  "repr": "u'true'"
+                },
+                "parent": {
+                  "type": "repr",
+                  "repr": "None"
+                },
+                "dock_widget_title": {
+                  "type": "repr",
+                  "repr": "u'Form'"
+                }
+              },
+              "groups": {}
+            }
+          }
+        }
+      }
+    },
+    "mainwindow": {
+      "keys": {
+        "geometry": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('01d9d0cb000200000000000000000037000009ff0000063f000000000000006f000009ff0000063f00000000000000000a00')",
+          "pretty-print": "       7   ?   o   ?     "
+        },
+        "state": {
+          "type": "repr(QByteArray.hex)",
+          "repr(QByteArray.hex)": "QtCore.QByteArray('000000ff00000000fd000000010000000300000a0000000583fc0100000007fb00000044007200710074005f00670072006100700068005f005f0052006f007300470072006100700068005f005f0031005f005f0052006f0073004700720061007000680055006901000000000000078a0000000000000000fc00000000000008d80000000000fffffffa000000000200000002fb00000046007200710074005f006d00790070006b0067005f005f004d007900200050006c007500670069006e005f005f0032005f005f004d00790050006c007500670069006e005500690100000000ffffffff0000000000000000fb00000046007200710074005f006d00790070006b0067005f005f004d007900200050006c007500670069006e005f005f0031005f005f004d00790050006c007500670069006e005500690100000027000004760000000000000000fb00000026007200710074005f007200760069007a005f005f005200560069007a005f005f0031005f005f0100000000000008c00000057100fffffffb0000005a007200710074005f0069006d006100670065005f0076006900650077005f005f0049006d0061006700650056006900650077005f005f0031005f005f0049006d006100670065005600690065007700570069006400670065007403000000000000009600000a0000000583fb0000005c006c0075006e00610062006f0074006900630073005f007200710074005f00320033005f00550049005f005f004d007900200050006c007500670069006e005f005f0032005f005f004d00790050006c007500670069006e0055006901000008cc00000134000000e700fffffffb0000005c006c0075006e00610062006f0074006900630073005f007200710074005f00320033005f00550049005f005f004d007900200050006c007500670069006e005f005f0033005f005f004d00790050006c007500670069006e0055006901000002eb000000e70000000000000000fb0000005c006c0075006e00610062006f0074006900630073005f007200710074005f00320033005f00550049005f005f004d007900200050006c007500670069006e005f005f0031005f005f004d00790050006c007500670069006e005500690000000000ffffffff000000bd00ffffff00000a000000000000000004000000040000000800000008fc00000001000000030000000100000036004d0069006e0069006d0069007a006500640044006f0063006b00570069006400670065007400730054006f006f006c0062006100720000000000ffffffff0000000000000000')",
+          "pretty-print": "                 Drqt_graph__RosGraph__1__RosGraphUi                                                                                                           ' v                               q                                                                                                              4                                                                                                                                                                              "
+        }
+      },
+      "groups": {
+        "toolbar_areas": {
+          "keys": {
+            "MinimizedDockWidgetsToolbar": {
+              "type": "repr",
+              "repr": "8"
+            }
+          },
+          "groups": {}
+        }
+      }
+    }
+  }
+}
