@@ -22,6 +22,13 @@ Clone this package into your src folder in your workspace:
 
 The package is now installed
 
+
+## View the UI
+
+ -	`cd ~/catkin_ws/`
+ -	`roslaunch lunabotics_rqt_23_UI viewUI.launch`
+
+
 ##  Directions on adding code
 
  - Make sure to branch away from main as soon as you install the package
