@@ -1,5 +1,5 @@
 
-# lunabotics_rqt_UI_23
+# lunabotics_rqt_23_UI
 
 This is the package that will hold all of the UI's components. 
 
@@ -13,9 +13,9 @@ Clone this package into your src folder in your workspace:
  - The src folder is where any and all packages you create or install are placed
  -	Install the package
 	 -	HTTPS:
-		 -	`git clone https://github.com/menayal/lunabotics_rqt_UI_23.git`
+		 -	`git clone https://github.com/menayal/lunabotics_rqt_23_UI.git`
 	 -	or SSH:
-		 -	`git clone git@github.com:menayal/lunabotics_rqt_UI_23.git`
+		 -	`git clone git@github.com:menayal/lunabotics_rqt_23_UI.git`
  -	Move back to your catkin_ws parent directory and run catkin_make
 	 -	`cd ~/catkin_ws/src/`
 	 -	`catkin_make`
