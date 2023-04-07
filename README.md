@@ -17,7 +17,7 @@ Clone this package into your src folder in your workspace:
 	 -	or SSH:
 		 -	`git clone git@github.com:menayal/lunabotics_rqt_23_UI.git`
  -	Move back to your catkin_ws parent directory and run catkin_make
-	 -	`cd ~/catkin_ws/src/`
+	 -	`cd ~/catkin_ws/`
 	 -	`catkin_make`
 
 The package is now installed
