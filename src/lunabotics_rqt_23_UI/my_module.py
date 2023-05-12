@@ -1,6 +1,7 @@
 import os
 import rospy
 import rospkg
+import time
 
 from qt_gui.plugin import Plugin
 from python_qt_binding import loadUi
@@ -53,9 +54,16 @@ class MyPlugin(Plugin):
         # on the second row on the left, we have "labelForSomeData_2" and on the right we have "inputFeedDataLabel"
         # With this information, we can perform different actions on objects
 
+        # values = range(3)
+
+        # for i in values:
+        #     self._widget.inputFeedDataLabel.setText(str(i))
+        #     time.sleep(5)
+
+
         # To update labels:
-        self._widget.inputFeedDataLabel.setText("dataField_1")
-        self._widget.inputFeedDataLabel_2.setText("dataField_2")
+        # # self._widget.inputFeedDataLabel.setText("2")
+        # self._widget.inputFeedDataLabel_2.setText("dataField_2")
 
         # Now its up to you guys to get logic from various topics to input into those data fields
     

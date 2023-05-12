@@ -7,13 +7,13 @@
     <x>0</x>
     <y>0</y>
     <width>521</width>
-    <height>300</height>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="labelForSomeData">
+  <widget class="QLabel" name="labelForSettingPhase">
    <property name="geometry">
     <rect>
      <x>8</x>
@@ -23,10 +23,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>Label for some data:</string>
+    <string>Setting Phase</string>
    </property>
   </widget>
-  <widget class="QLabel" name="inputFeedDataLabel">
+  <widget class="QLabel" name="inputSettingPhase">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -39,7 +39,7 @@
     <string>feedDatahere</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelForSomeData_2">
+  <widget class="QLabel" name="labelForOngoingPhase">
    <property name="geometry">
     <rect>
      <x>8</x>
@@ -49,10 +49,10 @@
     </rect>
    </property>
    <property name="text">
-    <string>Label for some data:</string>
+    <string>Ongoing Phase</string>
    </property>
   </widget>
-  <widget class="QLabel" name="inputFeedDataLabel_2">
+  <widget class="QLabel" name="inputOngoingPhase">
    <property name="geometry">
     <rect>
      <x>320</x>
@@ -63,6 +63,58 @@
    </property>
    <property name="text">
     <string>feedDatahere</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelForManuaMode">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>210</y>
+     <width>270</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Manual Mode</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inputManuaMode">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>210</y>
+     <width>191</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>feedDatahere</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inputManuaMode_2">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>300</y>
+     <width>191</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>feedDatahere</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelForManuaMode_2">
+   <property name="geometry">
+    <rect>
+     <x>8</x>
+     <y>300</y>
+     <width>270</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Manual Mode</string>
    </property>
   </widget>
  </widget>
