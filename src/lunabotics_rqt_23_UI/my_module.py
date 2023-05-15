@@ -11,10 +11,11 @@ from python_qt_binding import QtCore
 import threading
 
 import rospy
-from std_msgs.msg import String
+from std_msgs.msg import String, Int8
 
 class MyPlugin(Plugin):
     topicData = ""
+
     def __init__(self, context):
         super(MyPlugin, self).__init__(context)
         # Give QObjects reasonable names
@@ -50,64 +51,101 @@ class MyPlugin(Plugin):
         # Add widget to the user interface
         context.add_widget(self._widget)
 
+        # For updating the labels     
+        self.init_subscriber()
+        self._timer = QtCore.QTimer()
+        self._timer.timeout.connect(self.update_data)
+        self._timer.start(1)  # Update every second
+
+    def init_subscriber(self):
+        self.temperature_list = []
+        self.pressure_list = []
+        self.altitude_list = []
+        rospy.Subscriber('/robot_process', Int8, self.callback)  # subscribe to the topic you are looking for
         
-        # Set the label's text data, we can do this:
-        # self._widget.ObjectLabelName.setText("dummy data")
-        # To see the your Qlabel's created object name, open QT designer and view the obj name
-        # For this simple label example, we have 2 labels and 2 input fields
-        # On the first row on the left, we have "labelForSomeData" and on the right we have "inputFeedDataLabel"
-        # on the second row on the left, we have "labelForSomeData_2" and on the right we have "inputFeedDataLabel"
-        # With this information, we can perform different actions on objects
-
-        # To update labels:
-        self._widget.inputFeedDataLabel.setText("dataField_1")
-        self._widget.inputFeedDataLabel_2.setText("dataField_2")
-        # self._widget.inputFeedDataLabel_3.setText("dataField_2")
-
-        # Now its up to you guys to get logic from various topics to input into those data fields
-    
-        # # Update the label every 10 seconds
-        # def update_label(val):
-        #     # current_time = str(datetime.datetime.now().time())
-        #     # self._widget.inputFeedDataLabel_2.setText(current_time)
-        #     for i in range(val):
-        #         print(val)
-        #         self._widget.inputFeedDataLabel_2.setText(str(i))
-        #         if(i == 4):
-        #             self._widget.inputFeedDataLabel_3.setText(str(i))
-        #         time.sleep(3)
-
-
-        # # timer = QtCore.QTimer()
-        # # timer.timeout.connect(update_label)
-        # # timer.start(10000)  # every 10,000 milliseconds
-        # update_label(5)
-
-        # def LongRunningTask():
-        #     for i in range(4):
-        #         print(i)
-        #         self._widget.inputFeedDataLabel_2.setText(str(i))
-        #         time.sleep(3)
-
+    def callback(self, data):
+        self.topicData = data 
         
-        # thread = threading.Thread(LongRunningTask())
-        # thread.start()
+    def update_data(self):
+        # self._widget.inputFeedDataLabel_2.adjustSize()
+        # self._widget.inputFeedDataLabel_2.setText(str(self.topicData))
 
-        # Create a QPushButton and a QLabel
+        if self.topicData == 23: #driving mode #for now does nothing
+            self._widget.labelForOngoingPhase.adjustSize()
+            # self._widget.labelForOngoingPhase.setText(f"Driving Phase: {someting}")
+            
+        # if self.topicData == 21: #digging phase
+        #     self._widget.inputSettingPhase.adjustSize()
+        #     # self._widget.inputSettingPhase.setText("enterconfighere") #may not even be used..
+        #     # self._widget.labelForOngoingPhase.setText(f"Digging Phase: {rospy.get_param("/ongoingDigPhase")}")
+        #     self._widget.labelForOngoingPhase.setText(rospy.get_param("/ongoingDigPhase"))
 
-        # button = QPushButton("CLICK ME")
-        # label = QLabel("Hello world")
+        # if self.topicData == 23: #drive phase
+        #     self._widget.inputSettingPhase.adjustSize()
+        #     # self._widget.inputSettingPhase.setText("enterconfighere") #may not even be used..
+        #     # self._widget.labelForOngoingPhase.setText(f"Digging Phase: {rospy.get_param("/ongoingDigPhase")}")
+        #     self._widget.labelForOngoingPhase.setText(rospy.get_param("/ongoingDigPhase"))
 
-        # # Define a slot that updates the label's text when the button is clicked
-        # def update_label_text():
-        #     label.setText("Button clicked")
+        # Do i even need to look at the values from robot_process? The parameters from the config file change, but as a direct result of a button click..
 
-        # # Connect the button's "clicked" signal to the update_label_text slot
-        # button.clicked.connect(update_label_text)
+        # Sol 1 : with 3 labels always present
+        #self._widget.inputOngoingPhase.setText("Dig phase: {}". format(str(rospy.get_param("/ongoingDigPhase"))))
 
-        # # Display the button and label in a window
-        # button.show()
-        # label.show()\
+        # Sol 2 : only the label that is currently true will show, otherwise nothing
+
+        #Setting Phases- may or may not need:
+        if rospy.get_param("/settingDigPhase") == True:
+            self._widget.inputSettingPhase.adjustSize()
+            self._widget.inputSettingPhase.setText("Setting Dig mode phase: {}". format(str(rospy.get_param("/settingDigPhase"))))
+        elif rospy.get_param("/settingDepositPhase") == True:
+            self._widget.inputSettingPhase.adjustSize()
+            self._widget.inputSettingPhase.setText("Setting Deposit mode phase: {}". format(str(rospy.get_param("/settingDepositPhase"))))
+        elif rospy.get_param("/settingDriveModePhase") == True:
+            self._widget.inputSettingPhase.adjustSize()
+            self._widget.inputSettingPhase.setText("Setting Drive mode phase: {}". format(str(rospy.get_param("/settingDriveModePhase"))))
+        elif rospy.get_param("/settingNavigationDepositPhase") == True:
+            self._widget.inputSettingPhase.adjustSize()
+            self._widget.inputSettingPhase.setText("Setting Navigation to Deposit mode phase: {}". format(str(rospy.get_param("/settingNavigationDepositPhase"))))
+        elif rospy.get_param("/settingNavigationDigPhase") == True:
+            self._widget.inputSettingPhase.adjustSize()
+            self._widget.inputSettingPhase.setText("Setting Navigation to Dig mode phase: {}". format(str(rospy.get_param("/settingNavigationDigPhase"))))
+
+
+
+        #Ongoing Phases:
+        if rospy.get_param("/ongoingDigPhase") == True:
+            self._widget.inputOngoingPhase.adjustSize()
+            self._widget.inputOngoingPhase.setText("Dig mode phase: {}". format(str(rospy.get_param("/ongoingDigPhase"))))
+        elif rospy.get_param("/ongoingDriveModePhase") == True:
+            self._widget.inputOngoingPhase.adjustSize()
+            self._widget.inputOngoingPhase.setText("Drive mode phase: {}". format(str(rospy.get_param("/ongoingDriveModePhase"))))
+        elif rospy.get_param("/ongoingDepositPhase") == True:
+            self._widget.inputOngoingPhase.adjustSize()
+            self._widget.inputOngoingPhase.setText("Deposit mode phase: {}". format(str(rospy.get_param("/ongoingDepositPhase"))))
+
+        # Maybe's
+        # Localization
+        elif rospy.get_param("/localizationPhase") == True:
+            self._widget.inputOngoingPhase.adjustSize()
+            self._widget.inputOngoingPhase.setText("Localization mode phase: {}". format(str(rospy.get_param("/localizationPhase"))))
+        # Traversal to Deposit zone
+        elif rospy.get_param("/ongoingNavigationDepositPhase") == True:
+            self._widget.inputOngoingPhase.adjustSize()
+            self._widget.inputOngoingPhase.setText("Navigation to Deposit mode phase: {}". format(str(rospy.get_param("/ongoingNavigationDepositPhase"))))
+        # Traversal to Dig zone
+        elif rospy.get_param("/ongoingNavigationDigPhase") == True:
+            self._widget.inputOngoingPhase.adjustSize()
+            self._widget.inputOngoingPhase.setText("Navigation to Dig mode phase: {}". format(str(rospy.get_param("/ongoingNavigationDigPhase"))))
+        
+        # Info for manual mode
+        self._widget.inputManuaMode.adjustSize()
+        self._widget.inputManuaMode.setText(str(rospy.get_param("/manualMode")))
+
+
+        # @TODO: Notes.. Ignore if not relevant
+        # @TODO: get the labels updated with the parameters, see if the params are even being updated - done - they should be
+        # @TODO: where is the params even changing?? May need to edit a param to add the driving thing - the params change - looks like only 3 do for now (ongoing Dig,Dep, and manualMode..)
+        # @TODO: Can go a few ways, we can just show the current phase that is true, show all the phases and show if true or false - currently only shows the phase running
 
         
         # def func():

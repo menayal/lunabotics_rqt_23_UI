@@ -6,63 +6,137 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>521</width>
-    <height>300</height>
+    <width>305</width>
+    <height>151</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QLabel" name="labelForSomeData">
+  <widget class="QLabel" name="labelForSettingPhase">
    <property name="geometry">
     <rect>
-     <x>8</x>
-     <y>30</y>
+     <x>0</x>
+     <y>20</y>
      <width>270</width>
      <height>34</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>Label for some data:</string>
+    <string>Setting Phase:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="inputFeedDataLabel">
+  <widget class="QLabel" name="inputSettingPhase">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>30</y>
+     <x>150</x>
+     <y>20</y>
      <width>191</width>
      <height>34</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>feedDatahere</string>
+    <string>nothing is running</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelForSomeData_2">
+  <widget class="QLabel" name="labelForOngoingPhase">
    <property name="geometry">
     <rect>
-     <x>8</x>
-     <y>120</y>
+     <x>0</x>
+     <y>50</y>
      <width>270</width>
      <height>34</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>Label for some data:</string>
+    <string>Ongoing Phase:</string>
    </property>
   </widget>
-  <widget class="QLabel" name="inputFeedDataLabel_2">
+  <widget class="QLabel" name="inputOngoingPhase">
    <property name="geometry">
     <rect>
-     <x>320</x>
-     <y>120</y>
+     <x>150</x>
+     <y>50</y>
      <width>191</width>
      <height>34</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>feedDatahere</string>
+    <string>nothing is running</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="labelForManuaMode">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>80</y>
+     <width>270</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Manual Mode:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="inputManuaMode">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>80</y>
+     <width>191</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>nothing is running</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>0</y>
+     <width>151</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Running Phases:</string>
    </property>
   </widget>
  </widget>
