@@ -138,7 +138,7 @@ class MyPlugin(Plugin):
             self._widget.inputOngoingPhase.setText("Navigation to Dig mode phase: {}". format(str(rospy.get_param("/ongoingNavigationDigPhase"))))
         
         # Info for manual mode
-        self._widget.inputManuaMode.adjustSize()
+        # self._widget.inputManuaMode.adjustSize()
         self._widget.inputManuaMode.setText(str(rospy.get_param("/manualMode")))
 
 
@@ -146,52 +146,6 @@ class MyPlugin(Plugin):
         # @TODO: get the labels updated with the parameters, see if the params are even being updated - done - they should be
         # @TODO: where is the params even changing?? May need to edit a param to add the driving thing - the params change - looks like only 3 do for now (ongoing Dig,Dep, and manualMode..)
         # @TODO: Can go a few ways, we can just show the current phase that is true, show all the phases and show if true or false - currently only shows the phase running
-
-        
-        # def func():
-        #     for i in range(10):
-        #         QApplication.processEvents()
-        #         print(i)
-        #         self._widget.inputFeedDataLabel_2.setText(str(i))
-        #         time.sleep(3)
-        #         print("func has been called!")
-
-        # for i in range(10):
-        #     print(i)
-        #     self._widget.inputFeedDataLabel_2.setText(str(i))
-        #     time.sleep(3)
-
-        #     if i == 3:
-        #         self._widget.inputFeedDataLabel_2.connect(func)
-
-        
-        self.init_subscriber()
-        self._timer = QtCore.QTimer()
-        self._timer.timeout.connect(self.update_data)
-        self._timer.start(1)  # Update every second
-
-    def init_subscriber(self):
-        self.temperature_list = []
-        self.pressure_list = []
-        self.altitude_list = []
-        rospy.Subscriber('chatter', String, self.callback)  # subscribe to the test_topic topic
-        # topicData = 0
-    def callback(self, data):
-        # self.temperature_list = data.temperature_list
-        # self.pressure_list = data.pressure_list
-        # self.altitude_list = data.altitude_list
-        self.topicData = data 
-        # self._widget.inputFeedDataLabel_2.setText(str(data))
-
-
-    def update_data(self):
-        self._widget.inputFeedDataLabel_2.adjustSize()
-        self._widget.inputFeedDataLabel_2.setText(str(self.topicData))
-        # self._widget.update_temperature(self.temperature_list)
-    #     self._widget.update_pressure(self.pressure_list)
-    #     self._widget.update_altitude(self.altitude_list)
-
-            
 
         # QApplication.processEvents()
         # for i in range (1000000):
