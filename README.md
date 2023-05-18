@@ -25,8 +25,13 @@ The package is now installed
 
 ## View the UI
 
- -	`cd ~/catkin_ws/`
- -	`roslaunch lunabotics_rqt_23_UI viewUI.launch`
+-  Make sure you have the associated robot code.
+	- `~/catkin/ws/src`
+	- Git clone this repo: https://github.com/GiovZa/wholeRobot     
+	- `catkin_make`
+- `roslaunch gen2bot allMotors.launch`
+	- You will not get it running with no errors since you are not connected to the robot, but you can still run the code for development
+-  `roslaunch lunabotics_rqt_23_UI viewUI.launch`
 
 
 ##  Directions on adding code
