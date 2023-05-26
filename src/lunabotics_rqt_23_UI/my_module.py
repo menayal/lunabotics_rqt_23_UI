@@ -147,7 +147,7 @@ class MyPlugin(Plugin):
         self._widget.inputBscrewVelocity.adjustSize()
         self._widget.inputBscrewVelocity.setText(str(rospy.get_param("/bscrew_cfg/motionCruiseVelocity")))
         self._widget.inputBscrewDownVelocity.adjustSize()
-        #self._widget.inputBscrewDownVelocity.setText(str(rospy.get_param("/bscrew_cfg/motionCruiseVelocityDown")))
+        self._widget.inputBscrewDownVelocity.setText(str(rospy.get_param("/bscrew_cfg/motionCruiseVelocityDown")))
 
         #Percent output
         self._widget.inputBscrewPercent.adjustSize()
