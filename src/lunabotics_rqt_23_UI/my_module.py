@@ -93,53 +93,106 @@ class MyPlugin(Plugin):
 
         # Sol 2 : only the label that is currently true will show, otherwise nothing
 
-        #Setting Phases- may or may not need:
-        if rospy.get_param("/settingDigPhase") == True:
-            self._widget.inputSettingPhase.adjustSize()
-            self._widget.inputSettingPhase.setText("Setting Dig mode phase: {}". format(str(rospy.get_param("/settingDigPhase"))))
-        elif rospy.get_param("/settingDepositPhase") == True:
-            self._widget.inputSettingPhase.adjustSize()
-            self._widget.inputSettingPhase.setText("Setting Deposit mode phase: {}". format(str(rospy.get_param("/settingDepositPhase"))))
-        elif rospy.get_param("/settingDriveModePhase") == True:
-            self._widget.inputSettingPhase.adjustSize()
-            self._widget.inputSettingPhase.setText("Setting Drive mode phase: {}". format(str(rospy.get_param("/settingDriveModePhase"))))
-        elif rospy.get_param("/settingNavigationDepositPhase") == True:
-            self._widget.inputSettingPhase.adjustSize()
-            self._widget.inputSettingPhase.setText("Setting Navigation to Deposit mode phase: {}". format(str(rospy.get_param("/settingNavigationDepositPhase"))))
-        elif rospy.get_param("/settingNavigationDigPhase") == True:
-            self._widget.inputSettingPhase.adjustSize()
-            self._widget.inputSettingPhase.setText("Setting Navigation to Dig mode phase: {}". format(str(rospy.get_param("/settingNavigationDigPhase"))))
+        # #Setting Phases- may or may not need:
+        # if rospy.get_param("/settingDigPhase") == True:
+        #     self._widget.inputSettingPhase.adjustSize()
+        #     self._widget.inputSettingPhase.setText("Setting Dig mode phase: {}". format(str(rospy.get_param("/settingDigPhase"))))
+        # elif rospy.get_param("/settingDepositPhase") == True:
+        #     self._widget.inputSettingPhase.adjustSize()
+        #     self._widget.inputSettingPhase.setText("Setting Deposit mode phase: {}". format(str(rospy.get_param("/settingDepositPhase"))))
+        # elif rospy.get_param("/settingDriveModePhase") == True:
+        #     self._widget.inputSettingPhase.adjustSize()
+        #     self._widget.inputSettingPhase.setText("Setting Drive mode phase: {}". format(str(rospy.get_param("/settingDriveModePhase"))))
+        # elif rospy.get_param("/settingNavigationDepositPhase") == True:
+        #     self._widget.inputSettingPhase.adjustSize()
+        #     self._widget.inputSettingPhase.setText("Setting Navigation to Deposit mode phase: {}". format(str(rospy.get_param("/settingNavigationDepositPhase"))))
+        # elif rospy.get_param("/settingNavigationDigPhase") == True:
+        #     self._widget.inputSettingPhase.adjustSize()
+        #     self._widget.inputSettingPhase.setText("Setting Navigation to Dig mode phase: {}". format(str(rospy.get_param("/settingNavigationDigPhase"))))
 
 
 
-        #Ongoing Phases:
-        if rospy.get_param("/ongoingDigPhase") == True:
-            self._widget.inputOngoingPhase.adjustSize()
-            self._widget.inputOngoingPhase.setText("Dig mode phase: {}". format(str(rospy.get_param("/ongoingDigPhase"))))
-        elif rospy.get_param("/ongoingDriveModePhase") == True:
-            self._widget.inputOngoingPhase.adjustSize()
-            self._widget.inputOngoingPhase.setText("Drive mode phase: {}". format(str(rospy.get_param("/ongoingDriveModePhase"))))
-        elif rospy.get_param("/ongoingDepositPhase") == True:
-            self._widget.inputOngoingPhase.adjustSize()
-            self._widget.inputOngoingPhase.setText("Deposit mode phase: {}". format(str(rospy.get_param("/ongoingDepositPhase"))))
+        # #Ongoing Phases:
+        # if rospy.get_param("/ongoingDigPhase") == True:
+        #     self._widget.inputOngoingPhase.adjustSize()
+        #     self._widget.inputOngoingPhase.setText("Dig mode phase: {}". format(str(rospy.get_param("/ongoingDigPhase"))))
+        # elif rospy.get_param("/ongoingDriveModePhase") == True:
+        #     self._widget.inputOngoingPhase.adjustSize()
+        #     self._widget.inputOngoingPhase.setText("Drive mode phase: {}". format(str(rospy.get_param("/ongoingDriveModePhase"))))
+        # elif rospy.get_param("/ongoingDepositPhase") == True:
+        #     self._widget.inputOngoingPhase.adjustSize()
+        #     self._widget.inputOngoingPhase.setText("Deposit mode phase: {}". format(str(rospy.get_param("/ongoingDepositPhase"))))
 
-        # Maybe's
-        # Localization
-        elif rospy.get_param("/localizationPhase") == True:
-            self._widget.inputOngoingPhase.adjustSize()
-            self._widget.inputOngoingPhase.setText("Localization mode phase: {}". format(str(rospy.get_param("/localizationPhase"))))
-        # Traversal to Deposit zone
-        elif rospy.get_param("/ongoingNavigationDepositPhase") == True:
-            self._widget.inputOngoingPhase.adjustSize()
-            self._widget.inputOngoingPhase.setText("Navigation to Deposit mode phase: {}". format(str(rospy.get_param("/ongoingNavigationDepositPhase"))))
-        # Traversal to Dig zone
-        elif rospy.get_param("/ongoingNavigationDigPhase") == True:
-            self._widget.inputOngoingPhase.adjustSize()
-            self._widget.inputOngoingPhase.setText("Navigation to Dig mode phase: {}". format(str(rospy.get_param("/ongoingNavigationDigPhase"))))
+        # # Maybe's
+        # # Localization
+        # elif rospy.get_param("/localizationPhase") == True:
+        #     self._widget.inputOngoingPhase.adjustSize()
+        #     self._widget.inputOngoingPhase.setText("Localization mode phase: {}". format(str(rospy.get_param("/localizationPhase"))))
+        # # Traversal to Deposit zone
+        # elif rospy.get_param("/ongoingNavigationDepositPhase") == True:
+        #     self._widget.inputOngoingPhase.adjustSize()
+        #     self._widget.inputOngoingPhase.setText("Navigation to Deposit mode phase: {}". format(str(rospy.get_param("/ongoingNavigationDepositPhase"))))
+        # # Traversal to Dig zone
+        # elif rospy.get_param("/ongoingNavigationDigPhase") == True:
+        #     self._widget.inputOngoingPhase.adjustSize()
+        #     self._widget.inputOngoingPhase.setText("Navigation to Dig mode phase: {}". format(str(rospy.get_param("/ongoingNavigationDigPhase"))))
         
         # Info for manual mode
-        # self._widget.inputManuaMode.adjustSize()
-        self._widget.inputManuaMode.setText(str(rospy.get_param("/manualMode")))
+        self._widget.inputManualMode.adjustSize()
+        self._widget.inputManualMode.setText(str(rospy.get_param("/manualMode")))
+
+        
+        #Info for Ballscrew parameter outputs
+        #Speed output
+        self._widget.inputBscrewVelocity.adjustSize()
+        self._widget.inputBscrewVelocity.setText(str(rospy.get.param("/bscrew_cfg/motionCruiseVelocity")))
+        self._widget.inputBscrewDownVelocity.adjustSize()
+        self._widget.inputBscrewDownVelocity.setText(str(rospy.get.param("/bscrew_cfg/motionCruiseVelocityDown")))
+
+        #Percent output
+        self._widget.inputBscrewPercent.adjustSize()
+        self._widget.inputBscrewPercent.setText(str(rospy.get.param("/bscrew_cfg/percentOutput")))
+
+
+        #Info for Linear Actuator parameter outputs
+        #Speed output
+        self._widget.inputLinActVelocity.adjustSize()
+        self._widget.inputLinActVelocity.setText(str(rospy.get.param("/linact_cfg/motionCruiseVelocity")))
+
+        #Percent output
+        self._widget.inputLinActPercent.adjustSize()
+        self._widget.inputLinActPercent.setText(str(rospy.get.param("/linact_cfg/percentOutput")))
+
+
+        #Info for Trencher parameter outputs
+        #Speed output
+        self._widget.inputTrencherVelocity.adjustSize()
+        self._widget.inputTrencherVelocity.setText(str(rospy.get.param("/trencher_cfg/motionCruiseVelocity")))
+
+        #Percent output
+        self._widget.inputTrencherPercent.adjustSize()
+        self._widget.inputTrencherPercent.setText(str(rospy.get.param("/trencher_cfg/percentOutput")))
+
+
+        #Info for Bucket parameter outputs
+        #Speed output
+        self._widget.inputBucketVelocity.adjustSize()
+        self._widget.inputBucketVelocity.setText(str(rospy.get.param("/bucket_cfg/motionCruiseVelocity")))
+
+        #Percent output
+        self._widget.inputBucketPercent.adjustSize()
+        self._widget.inputBucketPercent.setText(str(rospy.get.param("/bucket_cfg/percentOutput")))
+
+
+        #Info for Wheel parameter outputs
+        #Speed output
+        self._widget.inputWheelVelocity.adjustSize()
+        self._widget.inputWheelVelocity.setText(str(rospy.get.param("/wheel_cfg/motionCruiseVelocity")))
+
+        #Percent output
+        self._widget.inputWheelPercent.adjustSize()
+        self._widget.inputWheelPercent.setText(str(rospy.get.param("/wheel_cfg/percentOutput")))
+
 
 
         # @TODO: Notes.. Ignore if not relevant
@@ -173,3 +226,4 @@ class MyPlugin(Plugin):
     #     # Comment in to signal that the plugin has a way to configure
     #     # This will enable a setting button (gear icon) in each dock widget title bar
     #     # Usually used to open a modal configuration dialog
+
