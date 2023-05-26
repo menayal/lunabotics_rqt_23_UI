@@ -145,53 +145,53 @@ class MyPlugin(Plugin):
         #Info for Ballscrew parameter outputs
         #Speed output
         self._widget.inputBscrewVelocity.adjustSize()
-        self._widget.inputBscrewVelocity.setText(str(rospy.get.param("/bscrew_cfg/motionCruiseVelocity")))
+        self._widget.inputBscrewVelocity.setText(str(rospy.get_param("/bscrew_cfg/motionCruiseVelocity")))
         self._widget.inputBscrewDownVelocity.adjustSize()
-        self._widget.inputBscrewDownVelocity.setText(str(rospy.get.param("/bscrew_cfg/motionCruiseVelocityDown")))
+        self._widget.inputBscrewDownVelocity.setText(str(rospy.get_param("/bscrew_cfg/motionCruiseVelocityDown")))
 
         #Percent output
         self._widget.inputBscrewPercent.adjustSize()
-        self._widget.inputBscrewPercent.setText(str(rospy.get.param("/bscrew_cfg/percentOutput")))
+        self._widget.inputBscrewPercent.setText(str(rospy.get_param("/bscrew_cfg/percentOutput")))
 
 
         #Info for Linear Actuator parameter outputs
         #Speed output
         self._widget.inputLinActVelocity.adjustSize()
-        self._widget.inputLinActVelocity.setText(str(rospy.get.param("/linact_cfg/motionCruiseVelocity")))
+        self._widget.inputLinActVelocity.setText(str(rospy.get_param("/linact_cfg/motionCruiseVelocity")))
 
         #Percent output
         self._widget.inputLinActPercent.adjustSize()
-        self._widget.inputLinActPercent.setText(str(rospy.get.param("/linact_cfg/percentOutput")))
+        self._widget.inputLinActPercent.setText(str(rospy.get_param("/linact_cfg/percentOutput")))
 
 
         #Info for Trencher parameter outputs
         #Speed output
         self._widget.inputTrencherVelocity.adjustSize()
-        self._widget.inputTrencherVelocity.setText(str(rospy.get.param("/trencher_cfg/motionCruiseVelocity")))
+        self._widget.inputTrencherVelocity.setText(str(rospy.get_param("/trencher_cfg/motionCruiseVelocity")))
 
         #Percent output
         self._widget.inputTrencherPercent.adjustSize()
-        self._widget.inputTrencherPercent.setText(str(rospy.get.param("/trencher_cfg/percentOutput")))
+        self._widget.inputTrencherPercent.setText(str(rospy.get_param("/trencher_cfg/percentOutput")))
 
 
         #Info for Bucket parameter outputs
         #Speed output
         self._widget.inputBucketVelocity.adjustSize()
-        self._widget.inputBucketVelocity.setText(str(rospy.get.param("/bucket_cfg/motionCruiseVelocity")))
+        self._widget.inputBucketVelocity.setText(str(rospy.get_param("/bucket_cfg/motionCruiseVelocity")))
 
         #Percent output
         self._widget.inputBucketPercent.adjustSize()
-        self._widget.inputBucketPercent.setText(str(rospy.get.param("/bucket_cfg/percentOutput")))
+        self._widget.inputBucketPercent.setText(str(rospy.get_param("/bucket_cfg/percentOutput")))
 
 
         #Info for Wheel parameter outputs
         #Speed output
         self._widget.inputWheelVelocity.adjustSize()
-        self._widget.inputWheelVelocity.setText(str(rospy.get.param("/wheel_cfg/motionCruiseVelocity")))
+        self._widget.inputWheelVelocity.setText(str(rospy.get_param("/wheel_cfg/motionCruiseVelocity")))
 
         #Percent output
         self._widget.inputWheelPercent.adjustSize()
-        self._widget.inputWheelPercent.setText(str(rospy.get.param("/wheel_cfg/percentOutput")))
+        self._widget.inputWheelPercent.setText(str(rospy.get_param("/wheel_cfg/percentOutput")))
 
 
 
