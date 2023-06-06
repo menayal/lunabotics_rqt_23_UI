@@ -40,7 +40,9 @@ The package is now installed
 * QT Designer allows you to place buttons, labels, forms, etc.. onto a pane. You can use this application to also move and arrange things. 
 * Once the .ui file is created. we can view it in rqt by entering this command in the terminal:
 		`rqt`
+ 
 * Open up all your plugins that you want to save by hitting plugins and select from the dropdown. Arrange them however you like. When completed, go to the perspectives tab and hit export and put it into its own folder. 
+* You can also edit the rviz plugin config by adding your desired topics then saving them in their desired location.
 
 * Core application is stored in the **src/lunabotics_rqt_23_UI/** directory
 	* All the logic is completed in [my_module.py](https://github.com/menayal/lunabotics_rqt_23_UI/blob/interfaceEdits/src/lunabotics_rqt_23_UI/my_module.py). Take a look at the interfaceEdits branch for more recent changes. 
