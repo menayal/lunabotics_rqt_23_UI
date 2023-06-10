@@ -137,59 +137,66 @@ class MyPlugin(Plugin):
         #     self._widget.inputOngoingPhase.adjustSize()
         #     self._widget.inputOngoingPhase.setText("Navigation to Dig mode phase: {}". format(str(rospy.get_param("/ongoingNavigationDigPhase"))))
         
-        # Info for manual mode
+        
+
+        #The following includes parameter outputs which are specific pieces of info the UI will display based on the state of the action 
+        #being performed by the different components of the robot. Each is a varying numeric value that has been acquired from 
+        #PIDTrencher.yaml which will be placed as text values in pre-set labels made with the help of QT Designer
+        
+        
+        # Info for manual mode; displays information on whether robot is running manually or not
         self._widget.inputManualMode.adjustSize()
         self._widget.inputManualMode.setText(str(rospy.get_param("/manualMode")))
 
         
         #Info for Ballscrew parameter outputs
-        #Speed output
+        #Speed output; displays information relevant to the movement speed of the ballscrew
         self._widget.inputBscrewVelocity.adjustSize()
         self._widget.inputBscrewVelocity.setText(str(rospy.get_param("/bscrew_cfg/motionCruiseVelocity")))
         self._widget.inputBscrewDownVelocity.adjustSize()
         self._widget.inputBscrewDownVelocity.setText(str(rospy.get_param("/bscrew_cfg/motionCruiseVelocityDown")))
 
-        #Percent output
+        #Percent output; displays the percentage of the maximum voltage being utilized by the ballscrew
         self._widget.inputBscrewPercent.adjustSize()
         self._widget.inputBscrewPercent.setText(str(rospy.get_param("/bscrew_cfg/percentOutput")))
 
 
         #Info for Linear Actuator parameter outputs
-        #Speed output
+        #Speed output; displays information relevant to the movement speed of the linear actuator
         self._widget.inputLinActVelocity.adjustSize()
         self._widget.inputLinActVelocity.setText(str(rospy.get_param("/linact_cfg/motionCruiseVelocity")))
 
-        #Percent output
+        #Percent output; displays the percentage of the maximum voltage being utilized by the linear actuator
         self._widget.inputLinActPercent.adjustSize()
         self._widget.inputLinActPercent.setText(str(rospy.get_param("/linact_cfg/percentOutput")))
 
 
         #Info for Trencher parameter outputs
-        #Speed output
+        #Speed output; displays information relevant to the movement speed of the trencher
         self._widget.inputTrencherVelocity.adjustSize()
         self._widget.inputTrencherVelocity.setText(str(rospy.get_param("/trencher_cfg/motionCruiseVelocity")))
 
-        #Percent output
+        #Percent output; displays the percentage of the maximum voltage being utilized by the trencher
         self._widget.inputTrencherPercent.adjustSize()
         self._widget.inputTrencherPercent.setText(str(rospy.get_param("/trencher_cfg/percentOutput")))
 
 
         #Info for Bucket parameter outputs
-        #Speed output
+        #Speed output; displays information relevant to the movement speed of the bucket
         self._widget.inputBucketVelocity.adjustSize()
         self._widget.inputBucketVelocity.setText(str(rospy.get_param("/bucket_cfg/motionCruiseVelocity")))
 
-        #Percent output
+        #Percent output; displays the percentage of the maximum voltage being utilized by the bucket
         self._widget.inputBucketPercent.adjustSize()
         self._widget.inputBucketPercent.setText(str(rospy.get_param("/bucket_cfg/percentOutput")))
 
 
         #Info for Wheel parameter outputs
-        #Speed output
+        #Speed output; displays information relevant to the movement speed of the wheel(s)
         self._widget.inputWheelVelocity.adjustSize()
         self._widget.inputWheelVelocity.setText(str(rospy.get_param("/wheel_cfg/motionCruiseVelocity")))
 
-        #Percent output
+        #Percent output; displays the percentage of the maximum voltage being utilized by the wheel(s)
         self._widget.inputWheelPercent.adjustSize()
         self._widget.inputWheelPercent.setText(str(rospy.get_param("/wheel_cfg/percentOutput")))
 
